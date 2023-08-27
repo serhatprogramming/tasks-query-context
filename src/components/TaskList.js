@@ -1,6 +1,17 @@
 import Task from "./Task";
+import { useTasksQuery } from "../hooks/useTasksQuery";
 
-const TaskList = ({ tasks }) => {
+const TaskList = () => {
+  const { data: tasks, isLoading, isError } = useTasksQuery();
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (isError) {
+    return <p>Error fetching tasks</p>;
+  }
+
   return (
     <div>
       {tasks.map((task) => (

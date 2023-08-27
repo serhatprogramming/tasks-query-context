@@ -1,3 +1,4 @@
+import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
     <div>
       <h2>Task with Query and Context</h2>
       <TaskList tasks={tasks} />
+      <TaskForm />
     </div>
   );
 };
