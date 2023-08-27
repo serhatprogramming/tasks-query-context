@@ -8,7 +8,7 @@ const App = () => {
   ];
   return (
     <div>
-      <h2>Task with Query and Context</h2>
+      <h2>Tasks with Query and Context</h2>
       <TaskList tasks={tasks} />
       <TaskForm />
     </div>
